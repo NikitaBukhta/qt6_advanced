@@ -1,7 +1,7 @@
 #--------------------------- MAIN CONFIGURATION ---------------------------#
 
 cmake_minimum_required(VERSION 3.6.0)
-set(PROJECT_NAME qt6_learning)
+set(PROJECT_NAME lesson_3_10)
 project(${PROJECT_NAME})
 
 set(CMAKE_CXX_STANDARD 17)
