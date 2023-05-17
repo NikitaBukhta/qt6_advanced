@@ -3,7 +3,7 @@
 #include <QThread>
 #include <QDebug>
 
-namespace lesson_1{
+namespace lesson_3_10{
 
 Counter::Counter(QWeakPointer<QMutex> mutex, QWeakPointer<qint32> value)
     : m_mutex(mutex.toStrongRef())

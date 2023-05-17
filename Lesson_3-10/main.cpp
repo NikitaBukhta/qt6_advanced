@@ -7,7 +7,7 @@
 
 #include "Counter.hpp"
 
-using namespace lesson_1;
+using namespace lesson_3_10;
 
 int main(int argc, char **argv)
 {

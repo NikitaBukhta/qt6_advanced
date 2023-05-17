@@ -1,12 +1,12 @@
-#ifndef QT6_ADVANCE_LESSON_1_COUNTER_HPP
-#define QT6_ADVANCE_LESSON_1_COUNTER_HPP
+#ifndef QT6_ADVANCE_LESSON_3_10_COUNTER_HPP
+#define QT6_ADVANCE_LESSON_3_10_COUNTER_HPP
 
 #include <QRunnable>
 #include <QMutex>
 #include <QPointer>
 #include <QTypeInfo>
 
-namespace lesson_1{
+namespace lesson_3_10{
 
 class Counter : public QRunnable{
 public:
@@ -21,4 +21,4 @@ private:
 
 };
 
-#endif  // !QT6_ADVANCE_LESSON_1_COUNTER_HPP;
+#endif  // !QT6_ADVANCE_LESSON_3_10_COUNTER_HPP;
