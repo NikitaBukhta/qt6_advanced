@@ -11,6 +11,18 @@
  */
 
 #include <QCoreApplication>
+/* Lesson description:
+ * 
+ * What
+ * Threaded example;
+ * 
+ * Why
+ * Understand whats happening when we run code;
+ * 
+ * How
+ * Threaded code;
+ */
+
 #include <QThread>
 #include <QDebug>
 
