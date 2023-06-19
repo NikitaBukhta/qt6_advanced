@@ -19,6 +19,8 @@ void Test::test(void){
     // Notice: this gets run last!
     qInfo() << "TESTING" << currentThread();
 
+    /* Reloading threads isn't good because in case of exception, the program should crash;
+     */
     terminate();
 
     // Bad things happen from here;
