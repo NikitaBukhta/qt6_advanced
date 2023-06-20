@@ -22,7 +22,7 @@ void Manager::start(void) {
     for (const auto &thread : m_threads) {
         qInfo() << "Starting: " << thread->objectName();
         Counter *c = new Counter();
-        c->moveToThread(thread);
+        c->moveToThread(thread);    // RAW PTR!!!
         connect(thread, &QThread::started, c, &Counter::start);
         thread->start();
     }
