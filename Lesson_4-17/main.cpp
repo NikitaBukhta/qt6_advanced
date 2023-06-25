@@ -1,3 +1,15 @@
+/* Lesson description:
+ *
+ * What:
+ * UDP;
+ * 
+ * Why:
+ * We want to send and receive and not care about a connection;
+ * 
+ * How
+ * QUdpSocket;
+ */
+
 #include "Worker.hpp"
 
 #include <QCoreApplication>

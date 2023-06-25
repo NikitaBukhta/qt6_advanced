@@ -1,3 +1,15 @@
+/* Lesson description:
+ *
+ * What:
+ * UDP Chat example;
+ * 
+ * Why:
+ * We want to see how it works;
+ * 
+ * How:
+ * See the code;
+ */
+
 #include "Chat.hpp"
 #include "CommandLine.hpp"
 #include "Config.hpp"
