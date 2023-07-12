@@ -6,7 +6,7 @@
 namespace lesson_4_19 {
 
 Client::Client(QObject *parent) : QObject(parent) {
-    connect(&m_tcp_socket, &QTcpSocket::connected, this, Client::connected);
+    connect(&m_tcp_socket, &QTcpSocket::connected, this, &Client::connected);
     connect(&m_tcp_socket, &QTcpSocket::disconnected, this, &Client::disconnected);
 
     connect(&m_tcp_socket, &QTcpSocket::errorOccurred, this, &Client::error_occured);
