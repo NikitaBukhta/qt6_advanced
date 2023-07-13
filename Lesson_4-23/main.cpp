@@ -48,7 +48,7 @@ void read(QUdpSocket &socket) {
 
     QNetworkDatagram datagram;
 
-    if (!socket.waitForReadyRead(60000)) {
+    if (!socket.waitForReadyRead(60'000)) {
         qWarning() << "[read]" << "Nothing to read!";
         return;
     }
