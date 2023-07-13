@@ -1,3 +1,15 @@
+/* Lesson description:
+ *
+ * What:
+ * SSL Client;
+ * 
+ * Why:
+ * We want an encrypted TCP connection;
+ * 
+ * How
+ * QSslSocket;
+ */
+
 #include "Client.hpp"
 
 #include <QCoreApplication>
@@ -8,7 +20,7 @@ int main(int argc, char **argv) {
     QCoreApplication app(argc, argv);
 
     Client client;
-    client.connect_to_host("httpbin.org", 80); // Not encrypted;
+    //client.connect_to_host("httpbin.org", 80); // Not encrypted;
     client.connect_to_host("httpbin.org", 443); // SSL - OpenSsl;
 
     return app.exec();
