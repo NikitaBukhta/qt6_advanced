@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
 
     lesson_4_27::Worker *worker = new lesson_4_27::Worker();
     worker->moveToThread(&worker_thread);
-    QObject::connect(&worker_thread, &QThread::started, worker, lesson_4_27::Worker::start);
+    QObject::connect(&worker_thread, &QThread::started, worker, &lesson_4_27::Worker::start);
     worker_thread.start();
 
     return app.exec();
