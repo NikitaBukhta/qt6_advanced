@@ -10,13 +10,17 @@ namespace lesson_3_10{
 
 class Counter : public QRunnable{
 public:
-    Counter(QWeakPointer<QMutex> mutex, QWeakPointer<qint32> value);
+    Counter(QMutex *mutex, qint32 *value);
     ~Counter(void);
 
-    void run(void);
+    // overring QRunnable starts;
+
+    virtual void run(void) override;
+
+    // overring QRunnable ends;
 private:
-    QSharedPointer<qint32> m_value;
-    QSharedPointer<QMutex> m_mutex;
+    qint32 *m_value;
+    QMutex *m_mutex;
 };
 
 };

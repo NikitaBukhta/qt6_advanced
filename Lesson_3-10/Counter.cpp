@@ -5,15 +5,15 @@
 
 namespace lesson_3_10{
 
-Counter::Counter(QWeakPointer<QMutex> mutex, QWeakPointer<qint32> value)
-    : m_mutex(mutex.toStrongRef())
-    , m_value(value.toStrongRef()){
-    
-    qDebug() << "[Counter][Counter] constructor called";
+Counter::Counter(QMutex *mutex, qint32 *value)
+    : m_mutex(mutex)
+    , m_value(value)
+{    
+    qInfo() << Q_FUNC_INFO << "called";
 }
 
 Counter::~Counter(){
-    qDebug() << "[Counter][Counter] destructor called";
+    qInfo() << Q_FUNC_INFO << "called";
 }
 
 void Counter::run(void){
@@ -23,7 +23,7 @@ void Counter::run(void){
 
     QThread::currentThread()->msleep(50);
     *m_value += 1;
-    qInfo() << *m_value << QThread::currentThread();
+    qInfo() << Q_FUNC_INFO << *m_value << QThread::currentThread();
 
     m_mutex->unlock();  // Other threads can lock;
 }
