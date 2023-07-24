@@ -11,11 +11,16 @@ class Producer : public QObject{
     Q_OBJECT
 
 public:
-    explicit Producer();
+    explicit Producer(QMutex &mutex, QWaitCondition &value_ready, qint32 &value, QObject *parent = nullptr);
+    virtual ~Producer(void);
+
+public slots:
+    void run(void);
 
 private:
     QMutex &m_mutex;
     QWaitCondition &m_value_ready;
+    qint32 &m_value;
 };
 
 }   // !lesson_3_13;
